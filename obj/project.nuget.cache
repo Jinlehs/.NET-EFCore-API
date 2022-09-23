@@ -1,15 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "FeYlM61tyfaDF6MrFOrrSJpcXYWjTyBFIRqaBDpteX28575S038CrLNcdKwQU4KCQydmwz7QKh1zIYkyfNlevw==",
+  "dgSpecHash": "np0X2eR3y2+31cpEqzDPROYNR/27N8aiHyZoi5zZq9vSgQlZ++mz2ceh9fkYSYN1Me10TC++WjAt2QlvRO44CA==",
   "success": true,
   "projectFilePath": "/Users/jinlehs/Desktop/dotnet/dotnet-rpg/dotnet-rpg.csproj",
   "expectedPackageFiles": [
+    "/Users/jinlehs/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
+    "/Users/jinlehs/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "/Users/jinlehs/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/jinlehs/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/jinlehs/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/jinlehs/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/jinlehs/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "/Users/jinlehs/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/jinlehs/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/jinlehs/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/jinlehs/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/jinlehs/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "/Users/jinlehs/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/jinlehs/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

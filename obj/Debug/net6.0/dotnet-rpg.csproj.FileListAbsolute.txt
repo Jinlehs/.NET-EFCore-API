@@ -25,3 +25,5 @@
 /Users/jinlehs/Desktop/dotnet/dotnet-rpg/obj/Debug/net6.0/dotnet-rpg.pdb
 /Users/jinlehs/Desktop/dotnet/dotnet-rpg/obj/Debug/net6.0/dotnet-rpg.genruntimeconfig.cache
 /Users/jinlehs/Desktop/dotnet/dotnet-rpg/obj/Debug/net6.0/ref/dotnet-rpg.dll
+/Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/AutoMapper.dll
+/Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
