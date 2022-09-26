@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using dotnet_rpg.Data;
 using dotnet_rpg.DTO.Character;
+using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_rpg.Services.CharacterService
 {
@@ -16,9 +18,11 @@ namespace dotnet_rpg.Services.CharacterService
             new Character{ Id = 1, Name = "Sam" }
         };
         public readonly IMapper _mapper;
+        public readonly DataContext _context;
         
-        public CharacterService(IMapper mapper)
+        public CharacterService(IMapper mapper, DataContext context)
         {
+            _context = context;
             _mapper = mapper; 
         }
         
@@ -54,19 +58,19 @@ namespace dotnet_rpg.Services.CharacterService
 
         public async Task<ServiceResponse<List<GetCharacterDto>>> GetAllCharacters()
         {
+            var response = new ServiceResponse<List<GetCharacterDto>>(); 
+            var dbCharacters = await _context.Characters.ToListAsync(); 
+            response.Data = dbCharacters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
+            return response;
             
-            return new ServiceResponse<List<GetCharacterDto>> 
-            { 
-                Data = characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList() 
-            };
         }
 
         public async Task<ServiceResponse<GetCharacterDto>> GetCharacterById(int id)
         {
             var serviceResponse = new ServiceResponse<GetCharacterDto>(); 
-            var character = characters.FirstOrDefault(c => c.Id == id);
+            var dbCharacter = await _context.Characters.FirstOrDefaultAsync(c => c.Id == id);
             //FirstOrDefault function = return the 1st elemt of a sequence or a default value if element isnt there 
-            serviceResponse.Data = _mapper.Map<GetCharacterDto>(character); 
+            serviceResponse.Data = _mapper.Map<GetCharacterDto>(dbCharacter); 
             return serviceResponse;
         }
         
