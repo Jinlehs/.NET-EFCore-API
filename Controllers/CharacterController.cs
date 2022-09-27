@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using dotnet_rpg.DTO.Character;
 using dotnet_rpg.Services.CharacterService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -14,8 +16,8 @@ namespace dotnet_rpg.Controllers
 
     //applies inference rules for the default data sources of action parameters 
     //these rules save you from having to ID binding sources manually by applying attributes to the action params 
+    [Authorize]
     [ApiController]
-
     [Route("api/[controller]")]
     //controllerbase class provides many properties and methods that are useful  for handling Http requests 
     public class CharacterController : ControllerBase
@@ -27,15 +29,19 @@ namespace dotnet_rpg.Controllers
             _characterService = characterService;
             
         }
-        
+        //this allows us to override the authentication and allows for anyone to access this functionality 
+        //[AllowAnonymous]
         //retrieves the info of the given server using a url 
         //url path: /api/Character/GetAll
         [HttpGet("GetAll")]
         //Action result is a data type -> result of action when executed -> in this case the result is character type 
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Get()
         {
-            //creates an OkResult that produces an empty Status200OK response 
-            return Ok(await _characterService.GetAllCharacters());
+            int userid = int.Parse(User.Claims.FirstOrDefault(c => 
+                c.Type == ClaimTypes.NameIdentifier).Value);
+            
+            return Ok(await _characterService.GetAllCharacters(userid)); 
+    
         }
 
         //url path: /api/Character/{id}

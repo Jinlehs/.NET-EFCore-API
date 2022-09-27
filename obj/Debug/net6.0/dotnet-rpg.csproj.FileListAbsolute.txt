@@ -61,3 +61,8 @@
 /Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
 /Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/Humanizer.dll
 /Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll
+/Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/Scrutor.dll
+/Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/Swashbuckle.AspNetCore.Filters.dll
+/Users/jinlehs/Desktop/dotnet/dotnet-rpg/bin/Debug/net6.0/Swashbuckle.AspNetCore.Filters.Abstractions.dll
