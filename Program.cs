@@ -1,6 +1,7 @@
 global using dotnet_rpg.Models;
 using dotnet_rpg.Data;
 using dotnet_rpg.Services.CharacterService;
+using dotnet_rpg.Services.WeaponService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -31,6 +32,7 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 //the DI framework takes on the responsibility of creating an instance of the depenedency and disposing of it when it is no longer needed
 builder.Services.AddScoped<ICharacterService, CharacterService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IWeaponService, WeaponService>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => { 
     options.TokenValidationParameters = new TokenValidationParameters { 
         ValidateIssuerSigningKey = true, 
@@ -39,6 +41,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidateAudience = false
     };
 });
+
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 

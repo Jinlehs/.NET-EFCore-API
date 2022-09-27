@@ -37,10 +37,7 @@ namespace dotnet_rpg.Controllers
         //Action result is a data type -> result of action when executed -> in this case the result is character type 
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Get()
         {
-            int userid = int.Parse(User.Claims.FirstOrDefault(c => 
-                c.Type == ClaimTypes.NameIdentifier).Value);
-            
-            return Ok(await _characterService.GetAllCharacters(userid)); 
+           return Ok(await _characterService.GetAllCharacters()); 
     
         }
 
